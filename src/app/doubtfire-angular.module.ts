@@ -1,6 +1,7 @@
 import { interval } from 'rxjs';
 import { take } from 'rxjs/operators';
 
+import { RouterModule } from '@angular/router'; //courseflow
 import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule, DomSanitizer, Title } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
@@ -229,6 +230,7 @@ import { FUnitTaskListComponent } from './units/states/tasks/viewer/directives/f
 import { FTaskDetailsViewComponent } from './units/states/tasks/viewer/directives/f-task-details-view/f-task-details-view.component';
 import { FTaskSheetViewComponent } from './units/states/tasks/viewer/directives/f-task-sheet-view/f-task-sheet-view.component';
 import { TasksViewerComponent } from './units/states/tasks/tasks-viewer/tasks-viewer.component';
+import { CourseFlowComponent } from './courseflow/courseflow.component';
 
 @NgModule({
   // Components we declare
@@ -327,6 +329,7 @@ import { TasksViewerComponent } from './units/states/tasks/tasks-viewer/tasks-vi
     TasksViewerComponent,
     FUsersComponent,
     FUnitsComponent,
+    CourseFlowComponent, //courseflow
   ],
   // Module Imports
   imports: [
@@ -390,6 +393,9 @@ import { TasksViewerComponent } from './units/states/tasks/tasks-viewer/tasks-vi
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModuleNew,
+    RouterModule.forRoot([
+      { path: 'courseflow', component: CourseFlowComponent} //courseflow
+    ]),
   ],
   // Services we provide
   providers: [
