@@ -8,6 +8,7 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { AppInjector, setAppInjector } from './app-injector';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TutorGroupMangagerComponent } from './groups/tutor-group-manager/tutor-group-manager';
 
 // Lottie animation module
 import { LottieModule, LottieCacheModule } from 'ngx-lottie';
@@ -231,6 +232,7 @@ import { FTaskDetailsViewComponent } from './units/states/tasks/viewer/directive
 import { FTaskSheetViewComponent } from './units/states/tasks/viewer/directives/f-task-sheet-view/f-task-sheet-view.component';
 import { TasksViewerComponent } from './units/states/tasks/tasks-viewer/tasks-viewer.component';
 import { CourseFlowComponent } from './courseflow/courseflow.component';
+import { TutorGroupManagerComponent } from './groups/tutor-group-manager/tutor-group-manager.component';
 
 @NgModule({
   // Components we declare
@@ -330,6 +332,7 @@ import { CourseFlowComponent } from './courseflow/courseflow.component';
     FUsersComponent,
     FUnitsComponent,
     CourseFlowComponent, //courseflow
+    TutorGroupManagerComponent, //TGM
   ],
   // Module Imports
   imports: [
